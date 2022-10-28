@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: var(--secondory-text-color);
     color: var(--primery-text-color);
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
@@ -43,8 +43,22 @@ body {
     color: var(--secondory-text-color);
 }
 
+.logo.block {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+}
+
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Site nav */
@@ -68,7 +82,7 @@ body {
 
 /* Site auth */
 .auth-nav .link {
-    color: var(--primery-text-color);
+    color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -84,14 +98,16 @@ body {
 /* Hero */
 .hero {
     background-color: #2F303A;
+    text-align: center;
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
     color: var(--secondory-text-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
 }
 
@@ -104,6 +120,10 @@ body {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: none;
+    cursor: pointer;
 }
 
 .filter {
@@ -124,6 +144,8 @@ body {
 
 /* Section */
 .section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
     /* color: var(--primery-text-color); */
     font-weight: 700;
     font-size: 36px;
@@ -133,6 +155,8 @@ body {
 
 /* Feature */
 .feature .title {
+    margin-top: 0;
+    margin-bottom: 10px;
     /* color: var(--primery-text-color); */
     font-weight: 700;
     font-size: 14px;
@@ -140,6 +164,8 @@ body {
 }
 
 .feature .text {
+    margin-top: 0;
+    margin-bottom: 0;
     color: var(--title-text-color);
     /* font-weight: 400; */
     font-size: 14px;
@@ -166,8 +192,18 @@ body {
 }
 
 /* Team */
+.section.works,
+.section.staff {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .staff {
     background-color: var(--secondory-bkg-color);
+}
+
+.team .team-img {
+    margin-bottom: 30px;
 }
 
 .team-name {
@@ -175,6 +211,8 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .team-position {
@@ -182,11 +220,15 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Footer */
 .footer {
     background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .address .link {
@@ -200,4 +242,13 @@ body {
 
 .address .link.white {
     color: var(--secondory-text-color);
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.address .link.malito {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 9px;
 }
