@@ -55,6 +55,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .list {
@@ -106,9 +108,10 @@ body {
 }
 
 .auth-nav .link {
-    display: block;
+    display: inline-flex;
     padding-top: 32px;
     padding-bottom: 32px;
+    align-items: center;
 
     color: var(--title-text-color);
     font-weight: 500;
@@ -123,6 +126,22 @@ body {
     color: var(--accent-color);
 }
 
+.auth-nav .link.mail::before {
+    content: "";
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    background-image: url(../images/envelope.svg);
+}
+
+.auth-nav .link.phone::before {
+    content: "";
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    background-image: url(../images/smartphone.svg);
+}
+
 /* Hero */
 .hero {
     height: 600px;
@@ -132,7 +151,6 @@ body {
     background-color: #2F303A;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/hero-squooshed.jpg);
-    /* background-position: top 80px; */
     text-align: center;
 }
 
@@ -151,6 +169,7 @@ body {
 .filter-button {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .filter-button .item:not(:last-child) {
@@ -197,6 +216,13 @@ body {
 }
 
 /* Section */
+
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+}
+
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -220,6 +246,32 @@ body {
 
 .feature .item:nth-child(4n) {
     margin-right: 0;
+}
+
+.feature .item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    background-color: var(--secondory-bkg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.item.antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.item.clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.item.diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.item.astronaut::before {
+    background-image: url(../images/astronaut.svg);
 }
 
 .feature .title {
@@ -279,9 +331,14 @@ body {
     margin-bottom: 0;
 }
 
-.portfolio .img {
+.border {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
+
+.element .img {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .portfolio .title {
@@ -307,15 +364,21 @@ body {
     text-decoration: none;
 }
 
-/* Team */
-.section.images,
-.section.staff,
-.section.page {
+.images,
+.staff,
+.page,
+.clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.section.staff {
+.section {
+    padding-top: 94px;
+}
+
+/* Team */
+.staff {
+    background-color: var(--secondory-bkg-color);
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -323,20 +386,17 @@ body {
 
 .team {
     display: flex;
+    height: 428px;
 }
 
 .team .element {
     width: calc((100% - 90px) / 4);
     margin-right: 30px;
-    padding-bottom: 30px;
+    background-color: var(--secondory-text-color);
 }
 
 .team .element:nth-child(4n) {
     margin-right: 0;
-}
-
-.staff {
-    background-color: var(--secondory-bkg-color);
 }
 
 .team-img {
@@ -360,21 +420,92 @@ body {
     font-size: 16px;
     line-height: 1.19;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 16;
     text-align: center;
+}
+
+.social-networks {
+    display: flex;
+    height: 44px;
+    justify-content: center;
+}
+
+.social-networks .part {
+    margin-right: 10px;
+}
+
+.social-networks .part:nth-child(4n) {
+    margin-right: 0;
+}
+
+.social-networks .link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+.social-networks .link.insta {
+    background-image: url(../images/instagram.svg);
+}
+
+.social-networks .link.tweet {
+    background-image: url(../images/twitter.svg);
+}
+
+.social-networks .link.fb {
+    background-image: url(../images/facebook.svg);
+}
+
+.social-networks .link.in {
+    background-image: url(../images/linkedin.svg);
+}
+
+/* Clients */
+
+.emblem {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emblem .link {
+    display: inline-block;
+    /* height: 92px; */
+}
+
+.emblem .icon {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    margin-right: 30px;
+}
+
+.emblem .icon:nth-child(6n) {
+    margin-right: 0;
+}  
+
+.clients-logo {
+    padding: 16px 32px;
 }
 
 /* Footer */
 .footer {
     background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .address .link {
+    display: inline-block;
+    width: 231px;
+    height: 21px;
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-weight: 400;
@@ -394,4 +525,76 @@ body {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 9px;
+}
+
+.column {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: 70px;
+}
+
+.second-column {
+    padding-top: 72px;
+    padding-bottom: 100px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.container.footer {
+    display: flex;
+}
+
+.joinus-text {
+    color: var(--secondory-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.joinus {
+    display: flex;
+    height: 44px;
+}
+
+.joinus .icon {
+    margin-right: 10px;
+}
+
+.joinus .icon:nth-child(4n) {
+    margin-right: 0;
+}
+
+.joinus .link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.joinus .link.insta-white {
+    background-image: url(../images/instagram-white.svg);
+}
+
+.joinus .link.tweet-white {
+    background-image: url(../images/twitter-white.svg);
+}
+
+.joinus .link.fb-white {
+    background-image: url(../images/facebook-white.svg);
+}
+
+.joinus .link.in-white {
+    background-image: url(../images/linkedin-white.svg);
+}
+
+.joinus .link:hover,
+.joinus .link:focus {
+    background-color: var(--accent-color);
 }
