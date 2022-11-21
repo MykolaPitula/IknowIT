@@ -1,0 +1,66 @@
+.footer-title {
+  color: var(--secondory-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.email-form {
+  display: flex;
+}
+
+.email-field {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: 1px solid transparent;
+  color: var(--secondory-text-color);
+}
+
+.email-field::placeholder {
+  /* font-weight: 400; */
+  font-size: 16px;
+  line-height: 1.25;
+  /* letter-spacing: 0.03em; */
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 0;
+  color: var(--secondory-text-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.email-btn::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/svg/send.svg);
+  margin-left: 10px;
+}
+
+.third-column {
+  padding-top: 72px;
+  padding-bottom: 94px;
+}

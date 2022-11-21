@@ -1,0 +1,40 @@
+.joinus {
+    display: flex;
+  }
+  
+  .joinus .icon:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .footer-title {
+    color: var(--secondory-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .joinus .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--secondory-text-color);
+    background-color: rgba(255, 255, 255, 0.1);
+  
+    transition: background-color var(--trns-fast);
+  }
+  
+  .joinus .link:hover,
+  .joinus .link:focus {
+    background-color: var(--accent-color);
+  }
+  
+  .second-column {
+    padding-top: 72px;
+    padding-bottom: 100px;
+    margin-right: 93px;
+  }

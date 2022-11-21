@@ -1,0 +1,11 @@
+/* Header styles */
+.header {
+    background-color: var(--secondory-text-color);
+    height: 80px;
+    border-bottom: 1px solid #ECECEC;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
