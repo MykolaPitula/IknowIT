@@ -1,5 +1,9 @@
-/* Works styles*/
+.images {
+  @include section;
+}
+
 .works {
+    @extend %list;
     display: flex;
   }
   

@@ -1,4 +1,5 @@
 .contact {
+  @extend %list;
   display: flex;
   margin-left: auto;
 }
@@ -8,6 +9,7 @@
 }
 
 .contact__link {
+  @extend %link;
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;

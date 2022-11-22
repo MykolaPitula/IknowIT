@@ -4,6 +4,7 @@
 }
 
 .nav__list {
+  @extend %list;
   display: flex;
   margin-left: 93px;
 }
@@ -13,6 +14,7 @@
 }
 
 .nav__link {
+  @extend %link;
   display: block;
   position: relative;
   padding-top: 32px;

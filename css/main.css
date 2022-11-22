@@ -24,6 +24,17 @@
   overflow: hidden;
 }
 
+.portfolio .link, .address .link, .contact__link, .nav__link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.portfolio, .filter-button, .joinus, .address, .clients-list, .social-networks, .team-list, .works, .feature-list, .contact, .nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Base styles */
 body {
   background-color: var(--secondory-text-color);
@@ -47,25 +58,6 @@ p {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.link {
-  text-decoration: none;
-  color: currentColor;
-}
-
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.images,
-.staff,
-.page,
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .section-title {
@@ -264,9 +256,9 @@ p {
   cursor: pointer;
 }
 
-/* Feature styles*/
 .feature {
   padding-top: 94px;
+  padding-bottom: 0;
 }
 
 .feature-list {
@@ -340,7 +332,11 @@ p {
   line-height: 1.71;
 }
 
-/* Works styles*/
+.images {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .works {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,8 +378,9 @@ p {
   text-transform: uppercase;
 }
 
-/* Team styles*/
 .staff {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--secondory-bkg-color);
   max-width: 1600px;
   margin-left: auto;
@@ -478,7 +475,11 @@ p {
   background-color: var(--accent-color);
 }
 
-/* Clients styles*/
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .clients-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -716,7 +717,11 @@ p {
   padding-bottom: 94px;
 }
 
-/* Buttons */
+.page {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .filter-button {
   display: -webkit-box;
   display: -ms-flexbox;

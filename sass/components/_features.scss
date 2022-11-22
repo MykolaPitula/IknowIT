@@ -1,9 +1,9 @@
-/* Feature styles*/
-.feature {
-    padding-top: 94px;
+  .feature {
+    @include section (94px, 0);
   }
-  
+
   .feature-list {
+    @extend %list;
     display: flex;
     flex-wrap: wrap;
   }
