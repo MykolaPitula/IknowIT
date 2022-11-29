@@ -1,10 +1,33 @@
+// .container {
+//     width: 1200px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     margin-left: auto;
+//     margin-right: auto;
+
+//     /* outline: 1px solid red;
+//     outline-offset: -1px; */
+//   }
+
 .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  
-    /* outline: 1px solid red;
-    outline-offset: -1px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // mobile
+  @media screen and (min-width: 480px) {
+    width: 480px;
   }
+
+  // tablet
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  // desktop
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}

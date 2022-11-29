@@ -1,5 +1,12 @@
 .images {
-  @include section;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+.images {
+  @include section (94px);
 }
 
 .works {

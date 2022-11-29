@@ -1,4 +1,14 @@
-@mixin section ($pt: 94px, $pb: $pt) {
+@mixin section ($pt: 60px, $pb: $pt) {
     padding-top: $pt;
     padding-bottom: $pb;
+}
+
+@mixin card-set ($ident: 30px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $ident;
+}
+
+@mixin card-set-item ($items: 1, $indent: 30px) { 
+    flex-basis: calc((100% - $indent * ($items - 1)) / $items);
 }
